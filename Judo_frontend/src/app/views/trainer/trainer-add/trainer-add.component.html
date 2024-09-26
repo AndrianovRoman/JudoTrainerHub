@@ -1,0 +1,57 @@
+<div class="trainer" [formGroup]="trainerForm">
+  <div class="container">
+    <div class="auth-form">
+
+      <div class="trainer-title">
+        Создание тренера
+      </div>
+
+      <div class="auth-inputs">
+
+        <div class="auth-input">
+          <input type="text" class="input"
+                 [ngStyle]="{'border-color': trainerForm.get('firstName')?.invalid
+                 && (trainerForm.get('firstName')?.dirty || trainerForm.get('firstName')?.touched) ? 'red' : ''}"
+                 placeholder="Имя" formControlName="firstName">
+        </div>
+        <div class="auth-input">
+          <input type="text" class="input"
+                 [ngStyle]="{'border-color': trainerForm.get('lastName')?.invalid
+                 && (trainerForm.get('lastName')?.dirty || trainerForm.get('lastName')?.touched) ? 'red' : ''}"
+                 placeholder="Фамилия" formControlName="lastName">
+        </div>
+        <div class="auth-input">
+          <input type="text" class="input"
+                 [ngStyle]="{'border-color': trainerForm.get('phoneNumber')?.invalid
+                 && (trainerForm.get('phoneNumber')?.dirty || trainerForm.get('phoneNumber')?.touched) ? 'red' : ''}"
+                 placeholder="Телефон" formControlName="phoneNumber">
+        </div>
+        <div class="auth-input">
+          <input type="text" class="input"
+                 [ngStyle]="{'border-color': trainerForm.get('email')?.invalid
+                 && (trainerForm.get('email')?.dirty || trainerForm.get('email')?.touched) ? 'red' : ''}"
+                 placeholder="Email" formControlName="email">
+        </div>
+        <div class="auth-input">
+          <input type="password" class="input"
+                 [ngStyle]="{'border-color': trainerForm.get('password')?.invalid
+                 && (trainerForm.get('password')?.dirty || trainerForm.get('password')?.touched) ? 'red' : ''}"
+                 placeholder="Пароль" formControlName="password">
+        </div>
+        <div class="auth-select">
+          <select class="select" name="qualification" formControlName="qualificationId" >
+            <option value="1" [selected]="true" >Кандидат Мастера Спорта</option>
+            <option value="2" >Мастер Спорта</option>
+            <option value="3" >Мастер Спорта Международного Класса</option>
+            <option value="4" >Заслуженный Мастер Спорта</option>
+          </select>
+        </div>
+
+
+      </div>
+      <div class="auth-button">
+        <button class="button" [disabled]="trainerForm.invalid" (click)="create()">Создать</button>
+      </div>
+    </div>
+  </div>
+</div>

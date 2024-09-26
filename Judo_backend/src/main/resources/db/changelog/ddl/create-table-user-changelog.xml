@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                   https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+
+    <changeSet id="060720240945" author="Roman">
+        <createTable tableName="user">
+            <column name="id" type="bigserial">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="email" type="varchar(100)">
+                <constraints unique="true" nullable="false"/>
+            </column>
+            <column name="password" type="varchar(64)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="first_name" type="varchar(100)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="last_name" type="varchar(100)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="phone_number" type="varchar(20)"/>
+<!--            <column name="date_of_birth" type="varchar(20)"/>-->
+            <column name="is_trainer" type="boolean"/>
+            <column name="qualification_id" type="smallint">
+                <constraints nullable="true" foreignKeyName="fk_user_qualification" references="qualification(id)"/>
+            </column>
+            <column name="role_id" type="smallint">
+                <constraints foreignKeyName="fk_user_role" references="role(id)"/>
+            </column>
+        </createTable>
+    </changeSet>
+</databaseChangeLog>

@@ -1,0 +1,71 @@
+
+.session {
+  padding: 100px 0;
+}
+
+.session .container {
+  position: relative;
+}
+
+.session-title {
+  font-family: AireExterior, sans-serif;
+  font-weight: 400;
+  font-size: 39px;
+  margin-bottom: 80px;
+  color: #FFFFFF;
+  text-align: center;
+}
+
+.session-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+table{
+  border: 1px solid #00C5FF;
+  table-layout: fixed;
+  width: 100%;
+  margin-bottom: 20px;
+  border-collapse: collapse;
+  color: #FFFFFF;
+}
+
+table th {
+  font-size: 20px;
+  padding: 15px;
+  border: 1px solid #00C5FF;
+}
+table td{
+  font-size: 18px;
+  padding: 15px;
+  border: 1px solid #00C5FF;
+  text-align: center;
+}
+
+.options a {
+  text-decoration: none;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.options a:last-child {
+  margin-right: 0;
+}
+
+.session-extra {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.session-extra .button {
+  text-decoration: none;
+  position: unset;
+  background: #FFFFFF;
+  /*width: 321px;*/
+  font-family: AireExterior, sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  color: #141C24;
+}

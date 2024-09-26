@@ -1,0 +1,29 @@
+@font-face {
+  src: url("../fonts/AireExterior.ttf");
+  font-family: "AireExterior";
+  font-weight: 400;
+}
+
+@font-face {
+  src: url("../fonts/Roboto-Light.ttf");
+  font-family: "Roboto";
+  font-weight: 300;
+}
+
+@font-face {
+  src: url("../fonts/Roboto-Regular.ttf");
+  font-family: "Roboto";
+  font-weight: 400;
+}
+
+@font-face {
+  src: url("../fonts/Roboto-Medium.ttf");
+  font-family: "Roboto";
+  font-weight: 500;
+}
+
+@font-face {
+  src: url("../fonts/Roboto-Bold.ttf");
+  font-family: "Roboto";
+  font-weight: 700;
+}

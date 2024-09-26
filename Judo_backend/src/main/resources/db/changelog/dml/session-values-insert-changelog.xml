@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                   https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+
+    <changeSet id="170720241024" author="Roman">
+        <insert tableName="session">
+            <column name="id" value="1"/>
+            <column name="session_date" value="2024-07-25"/>
+            <column name="start_time" value="15:00"/>
+            <column name="end_time" value="17:00"/>
+            <column name="description" value="Тренировка по дзюдо для новичков"/>
+        </insert>
+        <insert tableName="session">
+            <column name="id" value="2"/>
+            <column name="session_date" value="2024-07-26"/>
+            <column name="start_time" value="13:00"/>
+            <column name="end_time" value="14:00"/>
+            <column name="description" value="Тренировка по дзюдо для профи"/>
+        </insert>
+        <insert tableName="session">
+            <column name="id" value="3"/>
+            <column name="session_date" value="2024-07-27"/>
+            <column name="start_time" value="11:00"/>
+            <column name="end_time" value="13:00"/>
+            <column name="description" value="Тренировка по дзюдо для пенсионеров"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>

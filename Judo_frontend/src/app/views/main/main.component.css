@@ -1,0 +1,38 @@
+.main {
+  /*padding-bottom: 10px;*/
+}
+
+.main-content {
+  position: relative;
+  top: -30px;
+  background-image: url("../../../assets/images/main-image.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 290px 0 165px 0;
+  border-radius: 10px;
+  text-align: center;
+  border: 1px solid #00C5FF;
+  box-shadow: 4px 4px 20px #00C5FF;
+}
+
+.main-title {
+  font-weight: 500;
+  font-size: 24px;
+  color: #FFFFFF;
+}
+
+.main-description {
+  font-family: AireExterior, sans-serif;
+  font-weight: 400;
+  font-size: 48px;
+  color: #FFFFFF;
+  margin-bottom: 97px;
+}
+
+.main-content .button {
+  font-family: AireExterior, sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  color: #000000;
+}

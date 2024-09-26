@@ -1,0 +1,57 @@
+.about {
+  padding: 100px 0;
+}
+
+.about-title {
+  font-family: AireExterior, sans-serif;
+  font-weight: 400;
+  font-size: 39px;
+  color: #FFFFFF;
+}
+
+.about-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.about-image {
+  width: 665px;
+}
+
+.about-image img {
+  width: 100%;
+}
+
+.about-description {
+  width: 480px;
+}
+
+.about-description-title {
+  font-family: AireExterior, sans-serif;
+  font-weight: 400;
+  font-size: 39px;
+  margin-bottom: 60px;
+  color: #FFFFFF;
+}
+
+.about-description-items {
+
+}
+
+.about-description-item {
+  font-size: 20px;
+  color: #ABABAB;
+  margin-bottom: 27px;
+}
+
+.about-description-item:last-child {
+  margin-bottom: 0;
+}
+
+.about-description-line {
+  width: 271px;
+  /*height: 1px;*/
+  border: 1px solid #ABABAB;
+  margin-bottom: 27px;
+}

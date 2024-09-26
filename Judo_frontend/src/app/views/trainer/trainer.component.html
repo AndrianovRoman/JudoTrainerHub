@@ -1,0 +1,53 @@
+<div class="trainer">
+  <div class="container">
+    <div class="trainer-title" *ngIf="trainers.length > 0">
+      Наши тренера
+    </div>
+    <div class="trainer-title" *ngIf="trainers.length <= 0">
+      Тренера отсутствуют
+    </div>
+    <div class="trainer-carousel" *ngIf="trainers.length > 0">
+      <owl-carousel-o [options]="customOptionsReviews" #owlCarRev>
+        <ng-template carouselSlide *ngFor="let trainer of trainers">
+
+          <div class="trainer-item">
+            <div class="trainer-image"
+            style="background-image: url('/assets/images/trainers/trainer1.jpg')"></div>
+            <div class="trainer-item-title">
+              {{trainer.firstName}}
+            </div>
+            <div class="trainer-qualification">
+              {{trainer.qualificationStr}}
+            </div>
+            <div class="trainer-action">
+              <a [routerLink]="'/trainer/' + trainer.id" class="button">Подробнее</a>
+            </div>
+          </div>
+
+        </ng-template>
+      </owl-carousel-o>
+
+      <div class="trainer-arrows">
+        <a class="move-backward" (click)="owlCarRev.prev()">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M10.5551 15C10.4003 15 10.2455 14.9435 10.1233 14.8224L4.81172 9.55746C3.94818 8.70151 3.94818 7.29647 4.81172 6.44052L10.1233 1.17563C10.3596 0.941456 10.7506 0.941456 10.9869 1.17563C11.2231 1.40981 11.2231 1.7974 10.9869 2.03158L5.67526 7.29647C5.28423 7.68407 5.28423 8.31392 5.67526 8.70151L10.9869 13.9664C11.2231 14.2006 11.2231 14.5882 10.9869 14.8224C10.8647 14.9354 10.7099 15 10.5551 15Z"
+              fill="#00C5FF"/>
+          </svg>
+        </a>
+        <a class="move-forward" (click)="owlCarRev.next()">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M5.44392 1C5.59871 1 5.75349 1.05652 5.87569 1.17765L11.1873 6.44254C12.0508 7.29849 12.0508 8.70353 11.1873 9.55948L5.87569 14.8244C5.63944 15.0585 5.2484 15.0585 5.01215 14.8244C4.7759 14.5902 4.7759 14.2026 5.01215 13.9684L10.3238 8.70353C10.7148 8.31593 10.7148 7.68608 10.3238 7.29849L5.01215 2.0336C4.7759 1.79942 4.7759 1.41182 5.01215 1.17765C5.13435 1.0646 5.28914 1 5.44392 1Z"
+              fill="#00C5FF"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="trainer-extra">
+      <a class="button" routerLink="/trainer-create" *ngIf="role == 'ADMIN'">Создать тренера</a>
+    </div>
+
+  </div>
+</div>

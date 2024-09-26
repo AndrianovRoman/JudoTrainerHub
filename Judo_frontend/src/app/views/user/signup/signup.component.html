@@ -1,0 +1,47 @@
+<div class="signup" [formGroup]="signupForm">
+  <div class="container">
+    <div class="auth-form">
+      <div class="auth-title">
+        <a routerLink="/user/login" >Вход</a>
+        <a routerLink="/user/signup" class="active">Регистрация</a>
+      </div>
+      <div class="auth-inputs">
+
+        <div class="auth-input">
+          <input type="text" class="input"
+                 [ngStyle]="{'border-color': signupForm.get('firstName')?.invalid
+                 && (signupForm.get('firstName')?.dirty || signupForm.get('firstName')?.touched) ? 'red' : ''}"
+                 placeholder="Имя" formControlName="firstName">
+        </div>
+        <div class="auth-input">
+          <input type="text" class="input"
+                 [ngStyle]="{'border-color': signupForm.get('lastName')?.invalid
+                 && (signupForm.get('lastName')?.dirty || signupForm.get('lastName')?.touched) ? 'red' : ''}"
+                 placeholder="Фамилия" formControlName="lastName">
+        </div>
+        <div class="auth-input">
+          <input type="text" class="input"
+                 [ngStyle]="{'border-color': signupForm.get('phoneNumber')?.invalid
+                 && (signupForm.get('phoneNumber')?.dirty || signupForm.get('phoneNumber')?.touched) ? 'red' : ''}"
+                 placeholder="Телефон" formControlName="phoneNumber">
+        </div>
+        <div class="auth-input">
+          <input type="text" class="input"
+                 [ngStyle]="{'border-color': signupForm.get('email')?.invalid
+                 && (signupForm.get('email')?.dirty || signupForm.get('email')?.touched) ? 'red' : ''}"
+                 placeholder="Email" formControlName="email">
+        </div>
+        <div class="auth-input">
+          <input type="password" class="input"
+                 [ngStyle]="{'border-color': signupForm.get('password')?.invalid
+                 && (signupForm.get('password')?.dirty || signupForm.get('password')?.touched) ? 'red' : ''}"
+                 placeholder="Пароль" formControlName="password">
+        </div>
+
+      </div>
+      <div class="auth-button">
+        <button class="button" [disabled]="signupForm.invalid" (click)="signup()">Зарегистрироваться</button>
+      </div>
+    </div>
+  </div>
+</div>

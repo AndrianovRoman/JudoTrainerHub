@@ -1,0 +1,29 @@
+.footer {
+  padding: 30px 0 30px 0;
+  border-top: 2px dashed #00C5FF;
+}
+
+.footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  text-decoration: none;
+  font-weight: 500;
+  color: #FFFFFF;
+  text-transform: uppercase;
+}
+
+.rights {
+  color: #FFFFFF;
+  font-size: 16px;
+}
+
+.author {
+  color: #FFFFFF;
+  font-size: 16px;
+  font-weight: 400;
+  text-transform: uppercase;
+}

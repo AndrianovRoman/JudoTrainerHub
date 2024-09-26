@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                   https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+
+    <changeSet id="060720240952" author="Roman">
+        <insert tableName="user">
+            <column name="id" value="1"/>
+            <column name="email" value="admin@mail.ru"/>
+            <column name="password" value="$2a$10$n1JwBDqGQSv6YAaUt7J7eOlgwptDBRax.tlAhtvRyJENud2w9/L.e"/>
+            <column name="first_name" value="Админ"/>
+            <column name="last_name" value="Админ"/>
+            <column name="phone_number" value="+79997746004"/>
+            <column name="is_trainer" value="false"/>
+<!--            <column name="qualification_id" value=""/>-->
+            <column name="role_id" value="3"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>

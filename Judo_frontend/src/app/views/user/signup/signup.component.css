@@ -1,0 +1,14 @@
+@import "../../../../assets/styles/_auth-form.css";
+
+.signup {
+  padding: 100px 0;
+}
+
+.signup .button {
+  width: 251px;
+  padding: 19px 39px;
+  font-family: AireExterior, sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  color: #000000;
+}

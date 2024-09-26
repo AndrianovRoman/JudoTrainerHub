@@ -1,0 +1,48 @@
+<div class="details" [formGroup]="userInfoForm">
+  <div class="container">
+    <div class="details-title">
+      Личная информация
+    </div>
+    <div class="details-title">
+      Статус: {{role}}
+    </div>
+    <div class="details-info">
+      <div class="auth-input">
+        <input type="text" class="input"
+               [ngStyle]="{'border-color': userInfoForm.get('firstName')?.invalid
+               && (userInfoForm.get('firstName')?.dirty || userInfoForm.get('firstName')?.touched) ? 'red' : ''}"
+               placeholder="Имя" formControlName="firstName">
+      </div>
+      <div class="auth-input">
+        <input type="text" class="input"
+               [ngStyle]="{'border-color': userInfoForm.get('lastName')?.invalid
+               && (userInfoForm.get('lastName')?.dirty || userInfoForm.get('lastName')?.touched) ? 'red' : ''}"
+               placeholder="Фамилия" formControlName="lastName">
+      </div>
+      <div class="auth-input">
+        <input type="text" class="input"
+               [ngStyle]="{'border-color': userInfoForm.get('phoneNumber')?.invalid
+               && (userInfoForm.get('phoneNumber')?.dirty || userInfoForm.get('phoneNumber')?.touched) ? 'red' : ''}"
+               placeholder="Телефон" formControlName="phoneNumber">
+      </div>
+      <div class="auth-input">
+        <input type="text" class="input"
+               [ngStyle]="{'border-color': userInfoForm.get('email')?.invalid
+               && (userInfoForm.get('email')?.dirty || userInfoForm.get('email')?.touched) ? 'red' : ''}"
+               placeholder="Email" formControlName="email">
+      </div>
+      <div class="auth-select" *ngIf="role == 'TRAINER'">
+        <select class="select" name="qualification" formControlName="qualificationId" >
+          <option value="1" [selected]="true" >Кандидат Мастера Спорта</option>
+          <option value="2" >Мастер Спорта</option>
+          <option value="3" >Мастер Спорта Международного Класса</option>
+          <option value="4" >Заслуженный Мастер Спорта</option>
+        </select>
+      </div>
+      <div class="details-button">
+        <button class="button" (click)="updateInfo()" [disabled]="!(userInfoForm.dirty && userInfoForm.valid)"> Сохранить </button>
+        <button class="button delete" (click)="deleteUser()" > Удалить аккаунт </button>
+      </div>
+    </div>
+  </div>
+</div>

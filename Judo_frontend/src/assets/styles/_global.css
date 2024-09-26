@@ -1,0 +1,25 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: Roboto, sans-serif;
+  font-weight: 300;
+  background-color: #141C24;
+}
+
+.container {
+  max-width: 1250px;
+  margin: 0 auto;
+}
+
+.button {
+  background: #FFFFFF;
+  padding: 19px 89px;
+  border: 0;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.button:disabled {
+  background: gray;
+  cursor: not-allowed;
+}

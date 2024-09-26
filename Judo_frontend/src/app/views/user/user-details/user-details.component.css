@@ -1,0 +1,41 @@
+@import "../../../../assets/styles/_auth-form.css";
+
+.details {
+  padding: 100px 0;
+}
+
+.details-title {
+  text-align: center;
+  font-family: AireExterior, sans-serif;
+  font-weight: 400;
+  font-size: 39px;
+  color: #FFFFFF;
+  margin-bottom: 50px;
+}
+
+.details-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.details-button {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.details-button .button {
+  width: 251px;
+  padding: 19px 39px;
+  font-family: AireExterior, sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  color: #000000;
+}
+
+.details-button .delete {
+  color: #FFFFFF;
+  background: #FF0000;
+}

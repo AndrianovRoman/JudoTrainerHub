@@ -1,0 +1,42 @@
+<div class="session" [formGroup]="sessionForm">
+  <div class="container">
+    <div class="auth-form">
+
+      <div class="session-title">
+        Создание тренировки
+      </div>
+
+      <div class="auth-inputs">
+
+        <div class="auth-input">
+          <input type="date" class="input" title="Дата тренировки"
+                 [ngStyle]="{'border-color': sessionForm.get('sessionDate')?.invalid
+                 && (sessionForm.get('sessionDate')?.dirty || sessionForm.get('sessionDate')?.touched) ? 'red' : ''}"
+                 placeholder="Дата" formControlName="sessionDate">
+        </div>
+        <div class="auth-input">
+          <input type="time" class="input" title="Начало тренировки"
+                 [ngStyle]="{'border-color': sessionForm.get('startTime')?.invalid
+                 && (sessionForm.get('startTime')?.dirty || sessionForm.get('startTime')?.touched) ? 'red' : ''}"
+                 placeholder="Начало" formControlName="startTime">
+        </div>
+        <div class="auth-input">
+          <input type="time" class="input" title="Конец тренировки"
+                 [ngStyle]="{'border-color': sessionForm.get('endTime')?.invalid
+                 && (sessionForm.get('endTime')?.dirty || sessionForm.get('endTime')?.touched) ? 'red' : ''}"
+                 placeholder="Конец" formControlName="endTime">
+        </div>
+        <div class="auth-input">
+          <input type="text" class="input"
+                 [ngStyle]="{'border-color': sessionForm.get('description')?.invalid
+                 && (sessionForm.get('description')?.dirty || sessionForm.get('description')?.touched) ? 'red' : ''}"
+                 placeholder="Описание" formControlName="description">
+        </div>
+
+      </div>
+      <div class="auth-button">
+        <button class="button" [disabled]="sessionForm.invalid" (click)="create()">Создать</button>
+      </div>
+    </div>
+  </div>
+</div>

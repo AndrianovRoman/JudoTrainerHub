@@ -1,0 +1,104 @@
+.trainer {
+  padding: 100px 0;
+}
+
+.trainer .container {
+  position: relative;
+}
+
+.trainer-title {
+  font-family: AireExterior, sans-serif;
+  font-weight: 400;
+  font-size: 39px;
+  margin-bottom: 80px;
+  color: #FFFFFF;
+  text-align: center;
+}
+
+.trainer-carousel {
+  position: relative;
+}
+
+.trainer-item {
+  width: 400px;
+  height: 543px;
+  padding: 76px 42px 47px 37px;
+  border-radius: 5px;
+  box-sizing: border-box;
+  background: #1F2631;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border: 1px solid #00C5FF;
+}
+
+.trainer-image {
+  width: 250px;
+  height: 250px;
+  background-size: cover;
+  margin-bottom: 30px;
+}
+
+.trainer-item-title {
+  font-family: Roboto, sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  margin-bottom: 15px;
+  color: #FFFFFF;
+}
+
+.trainer-qualification {
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: #FFFFFF;
+}
+
+.trainer-action .button {
+  text-decoration: none;
+  position: unset;
+  background: #00C5FF;
+  /*width: 321px;*/
+  font-family: AireExterior, sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  color: #141C24;
+}
+
+.trainer-extra {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.trainer-extra .button {
+  text-decoration: none;
+  position: unset;
+  background: #FFFFFF;
+  /*width: 321px;*/
+  font-family: AireExterior, sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  color: #141C24;
+}
+
+
+.trainer-arrows {
+  display: flex;
+}
+
+a {
+  top: calc(50% - 5px);
+  display: flex;
+  position: absolute;
+  cursor: pointer;
+}
+
+a.move-backward {
+   left: -41px;
+ }
+
+a.move-forward {
+   right: -41px;
+ }

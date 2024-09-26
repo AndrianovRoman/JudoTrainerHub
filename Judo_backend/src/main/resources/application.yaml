@@ -1,0 +1,41 @@
+#spring:
+#  datasource:
+#    driver-class-name: org.postgresql.Driver
+#    password: 1234
+#    username: postgres
+#    url: jdbc:postgresql://localhost:5432/Test
+#  jpa:
+#    database: POSTGRESQL
+#    show-sql: true
+#    format_sql: true
+#  liquibase:
+#    change-log: classpath:db/changelog/change-log-root.yaml
+#    enable: true
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/db_judo
+    username: postgres
+    password: 1234
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: none
+
+  liquibase:
+    enabled: true
+    change-log: classpath:db/changelog/main-changelog.xml
+
+authorization:
+  secret: "6251655468576D5A7134743777217A25432A46294A404E635266556A586E3272"
+  expiration: 25920000
+  refresh:
+    secret: "Fzu8EfZP8xK5I+cGxAhDRmEHtQJLzTu7Tb+KtUcWAbQi5r7MmFk7xHK2BY7r22oX"
+    expiration: 86400000
+
+cors:
+  origins: "*"
+  methods: "*"
+  headers: "*"
